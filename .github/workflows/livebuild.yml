@@ -68,5 +68,5 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.2
       with:
-        name: ABCEnchance-${{steps.current-time.outputs.formattedTime}}.zip
+        name: ABCEnchance-CommunityEdition-${{steps.current-time.outputs.formattedTime}}.zip
         path: ABCEnchance-CommunityEdition-windows-x86.zip
