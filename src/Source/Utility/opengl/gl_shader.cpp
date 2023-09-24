@@ -43,7 +43,7 @@ void GL_CheckShaderError(GLuint shader, const char* code, const char* filename){
 			g_pFileSystem->Write(szCompilerLog, nInfoLength, FileHandle);
 			g_pFileSystem->Close(FileHandle);
 		}
-		g_pMetaHookAPI->SysError("Shader %s compiled with error:\n%s", filename, szCompilerLog);
+		g_pMetaHookAPI->SysError("Shader %s compiled with an error:\n%s", filename, szCompilerLog);
 		return;
 	}
 }
@@ -85,7 +85,7 @@ GLuint R_CompileShader(const char* vscode, const char* fscode, const char* vsfil
 		char szCompilerLog[1024] = { 0 };
 		glGetProgramInfoLog(program, sizeof(szCompilerLog), &nInfoLength, szCompilerLog);
 
-		g_pMetaHookAPI->SysError("Shader linked with error:\n%s", szCompilerLog);
+		g_pMetaHookAPI->SysError("Shader linked with an error:\n%s", szCompilerLog);
 	}
 
 	g_ShaderTable.emplace_back(program, shader_objects, shader_object_used);

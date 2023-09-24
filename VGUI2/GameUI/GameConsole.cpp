@@ -34,6 +34,7 @@ void CGameConsole::Activate(void){
 }
 void CGameConsole::Initialize(void){
 	g_ConsoleDialog = new vgui::CConsoleDialog(nullptr, "Console", false);
+	g_ConsoleDialog->ColorPrint(Color(0, 255, 0, 200), "[ABCEnchance Community Edition] Current Community Edition build: 9242023!\n");
 	g_ConsoleDialog->ColorPrint(Color(0, 255, 0, 200), "[ABCEnchance Community Edition] ABCEnchance has loaded successfully!\n");
 	g_ConsoleDialog->ColorPrint(Color(0, 255, 0, 200), "[ABCEnchance Community Edition] You are currently running ABCEnchance Community Edition.\n");
 }
@@ -87,7 +88,7 @@ void GameConsole_InstallHook(void)
 		g_pMetaHookAPI->VFTHook(gameconsolefuncs, 0, 8, (void*)pVFTable[8], (void**)&m_pfnCGameConsole_SetParent);
 	}
 	else
-		g_pMetaHookAPI->SysError("[ABCEnchace] Can not create interface of gameconsole.");
+		g_pMetaHookAPI->SysError("[ABCEnchance Community Edition] Failed to create the GameConsole interface:\nCannot create an interface for Game Console.");
 }
 
 IGameConsole* GameConsole() {

@@ -546,7 +546,7 @@ void UninstallClientHook() {
 void CheckAsset() {
 	auto c = gEngfuncs.COM_LoadFile(const_cast<char*>("abcenchance/ABCEnchance.res"), 5, 0);
 	if(!c)
-		g_pMetaHookAPI->SysError("[ABCEnchance]:\nMissing resource files!\nPlease make sure the \"abcenchance/\" folder is placed correctly!");
+		g_pMetaHookAPI->SysError("[ABCEnchance Community Edition]:\nMissing resource files!\nPlease make sure the \"abcenchance/\" folder is placed correctly!");
 	gEngfuncs.COM_FreeFile(c);
 }
 void GL_Init(void){
@@ -704,7 +704,7 @@ void V_CalcRefdef(struct ref_params_s* pparams){
 
 			gCustomHud.m_bRenderRadarView = true;
 
-			//ÉèÖÃµ½Íæ¼ÒÄÔ´üÉÏ³¯ÏÂ¿´
+			//ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½Ï³ï¿½ï¿½Â¿ï¿½
 			gCustomHud.m_flOverViewScale = gCVars.pRadarZoom->value;
 			cl_entity_t* local = gEngfuncs.GetLocalPlayer();
 			gCustomHud.m_vecOverViewOrg[0] = local->curstate.origin[0];

@@ -49,7 +49,7 @@ void IPluginsV4::LoadEngine(cl_enginefunc_t *pEngfuncs){
 
 	memcpy(&gEngfuncs, pEngfuncs, sizeof(gEngfuncs));
 	if (g_iEngineType != ENGINE_SVENGINE)
-		g_pMetaHookAPI->SysError("%s can only run in SvenEngine!\nEngine type: %d\nEngine buildnum: %d", 
+		g_pMetaHookAPI->SysError("%s can only run on SvenEngine! (Sven Co-op's Modified Engine)\nEngine type: %d\nEngine buildnum: %d", 
 			"ABCEnchance.dll", g_iEngineType, g_dwEngineBuildnum);
 
 	CheckOtherPlugin();
