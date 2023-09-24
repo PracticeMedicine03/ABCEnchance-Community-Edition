@@ -3,6 +3,15 @@
 ABCEnchance Community Edition is a fork of DrAbcOfficial's ABCEnchance, this project is aimed to fix the issues
 currently on ABCEnchance.
 
+<!-- badges: start -->
+
+![Codacy Badge](https://img.shields.io/codacy/grade/d58f0a4ca9e649ffa5d1b97bb668598c?style=for-the-badge)
+![Downloads](https://img.shields.io/github/downloads/PracticeMedicine03/ABCEnchance-Community-Edition/total?style=for-the-badge)
+![Repo Size](https://img.shields.io/github/repo-size/PracticeMedicine03/ABCEnchance-Community-Edition?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/PracticeMedicine03/ABCEnchance-Community-Edition?style=for-the-badge)
+
+<!-- badges: end -->
+
 # Original ABCEnchance<img src="img/icon.png" align="right" width="120"/>
 A MetaHookSV plugin that introduces more instability and possible enhancements to the Sven Co-op.
 
