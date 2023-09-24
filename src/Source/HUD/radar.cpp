@@ -1,3 +1,4 @@
+// FIXME: The whole map doesn't appear on the radar. Need some devshot thingy?
 #include <metahook.h>
 
 #include <cmath>

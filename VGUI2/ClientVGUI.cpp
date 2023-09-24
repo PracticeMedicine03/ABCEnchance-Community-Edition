@@ -50,7 +50,7 @@ void InitResFile(CreateInterfaceFn* factories, int count) {
 		iPluginVersion = atoi(pSchemeData->GetResourceString("Version"));
 	}
 	else {
-		g_pMetaHookAPI->SysError("[ABCEnchance]:\nOoops! Can not load resource file!\nHave you installed it correctly?\n");
+		g_pMetaHookAPI->SysError("[ABCEnchance]:\nThe resource file can't be loaded.!\nMake sure ABCEnchance Community Edition is installed correctly.\n");
 		return;
 	}
 	if (iPluginVersion < PLUGIN_VERSION)
@@ -60,7 +60,7 @@ void InitResFile(CreateInterfaceFn* factories, int count) {
 	snprintf(localizePath, sizeof(localizePath), "abcenchance/localize/%s.txt",
 		(!strlen(pSchemeData->GetResourceString("Language"))) ? "%language%" : pSchemeData->GetResourceString("Language"));
 	if (!vgui::localize()->AddFile(g_pFileSystem, localizePath))
-		g_pMetaHookAPI->SysError("[ABCEnchance]:\nMissing Localize file: %s\n", localizePath);
+		g_pMetaHookAPI->SysError("[ABCEnchance]:\nMissing Localization file: %s\n(English and Simplified Chinese are the only languages available)", localizePath);
 }
 
 void NewClientVGUI::Initialize(CreateInterfaceFn* factories, int count)
