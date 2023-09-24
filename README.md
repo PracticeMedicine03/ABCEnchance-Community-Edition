@@ -1,6 +1,9 @@
 
-# ABCEnchance<img src="img/icon.png" align="right" width="120"/>
+# ABCEnchance Community Edition
+ABCEnchance Community Edition is a fork of DrAbcOfficial's ABCEnchance, this project is aimed to fix the issues
+currently on ABCEnchance.
 
+# Original ABCEnchance<img src="img/icon.png" align="right" width="120"/>
 A MetaHookSV plugin that introduces more instability and possible enhancements to the Sven Co-op.
 
 "Enchance" means "Enchantment", look the icon 👉
