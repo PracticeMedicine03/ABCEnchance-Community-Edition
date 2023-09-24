@@ -59,7 +59,7 @@ jobs:
       uses: vimtor/action-zip@v1
       with:
           files: MetaHookSv/Plugins/ABCEnchance/build/
-          dest: ABCEnchance-windows-x86.zip
+          dest: ABCEnchance-CommunityEdition-windows-x86.zip
 
     - name: Create Release
       uses: softprops/action-gh-release@v1
