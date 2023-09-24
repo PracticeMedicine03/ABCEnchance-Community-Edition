@@ -69,4 +69,4 @@ jobs:
       uses: actions/upload-artifact@v3.1.2
       with:
         name: ABCEnchance-${{steps.current-time.outputs.formattedTime}}.zip
-        path: ABCEnchance-windows-x86.zip
+        path: ABCEnchance-CommunityEdition-windows-x86.zip

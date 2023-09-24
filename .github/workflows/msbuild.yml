@@ -67,4 +67,4 @@ jobs:
       with:
           name: ABCEnchance-${{ github.ref }}
           files: |
-            ABCEnchance-windows-x86.zip
+            ABCEnchance-CommunityEdition-windows-x86.zip
