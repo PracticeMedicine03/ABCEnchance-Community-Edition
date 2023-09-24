@@ -42,25 +42,25 @@ public:
 };
 
 void InitResFile(CreateInterfaceFn* factories, int count) {
-	vgui::VGui_InitInterfacesList("ABCEnchance", factories, count);
-	vgui::HScheme iScheme = vgui::scheme()->LoadSchemeFromFile("abcenchance/ABCEnchance.res", "ABCEnchance");
+	vgui::VGui_InitInterfacesList("ABCEnchance Community Edition", factories, count);
+	vgui::HScheme iScheme = vgui::scheme()->LoadSchemeFromFile("abcenchance/ABCEnchance.res", "ABCEnchance Community Edition");
 	int iPluginVersion = 0;
 	if (iScheme > 0) {
 		pSchemeData = vgui::scheme()->GetIScheme(vgui::scheme()->GetScheme("ABCEnchance"));
 		iPluginVersion = atoi(pSchemeData->GetResourceString("Version"));
 	}
 	else {
-		g_pMetaHookAPI->SysError("[ABCEnchance]:\nThe resource file can't be loaded.!\nMake sure ABCEnchance Community Edition is installed correctly.\n");
+		g_pMetaHookAPI->SysError("[ABCEnchance Community Edition]:\nThe resource file can't be loaded.!\nMake sure ABCEnchance Community Edition is installed correctly.\n");
 		return;
 	}
 	if (iPluginVersion < PLUGIN_VERSION)
-		g_pMetaHookAPI->SysError("[ABCEnchance]:\nMismatched Resource file: abcenchance/ABCEnchance.res\nRequire Version: %d\nYour Version: %d\n",
+		g_pMetaHookAPI->SysError("[ABCEnchance Community Edition]:\nMismatched Resource file: abcenchance/ABCEnchance.res\nRequire Version: %d\nYour Version: %d\n",
 			PLUGIN_VERSION, iPluginVersion);
 	char localizePath[260];
 	snprintf(localizePath, sizeof(localizePath), "abcenchance/localize/%s.txt",
 		(!strlen(pSchemeData->GetResourceString("Language"))) ? "%language%" : pSchemeData->GetResourceString("Language"));
 	if (!vgui::localize()->AddFile(g_pFileSystem, localizePath))
-		g_pMetaHookAPI->SysError("[ABCEnchance]:\nMissing Localization file: %s\n(English and Simplified Chinese are the only languages available)", localizePath);
+		g_pMetaHookAPI->SysError("[ABCEnchance Community Edition]:\nMissing Localization file: %s\n(English and Simplified Chinese are the only languages available)", localizePath);
 }
 
 void NewClientVGUI::Initialize(CreateInterfaceFn* factories, int count)

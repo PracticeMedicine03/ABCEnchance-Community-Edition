@@ -303,7 +303,7 @@ void BasePanel_InstallHook(void){
 		}
 	}
 	else
-		g_pMetaHookAPI->SysError("[ABCEnchace] Can not find game ui for dynamic background.");
+		g_pMetaHookAPI->SysError("[ABCEnchance Community Edition] Cannot find GameUI for the dynamic background.");
 
 	HMODULE hVPX= LoadLibrary("vpx.dll");
 	if (hVPX) {
@@ -326,5 +326,5 @@ void BasePanel_InstallHook(void){
 #undef GetFuncVPX
 	}
 	else
-		g_pMetaHookAPI->SysError("[ABCEnchace] Can not open vpx.dll!");
+		g_pMetaHookAPI->SysError("[ABCEnchance Community Edition] Failed to load ABCEnchance Community Edition binaries\nThe missing files are:\nvpx.dll");
 }

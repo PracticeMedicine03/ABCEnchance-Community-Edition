@@ -34,7 +34,8 @@ void CGameConsole::Activate(void){
 }
 void CGameConsole::Initialize(void){
 	g_ConsoleDialog = new vgui::CConsoleDialog(nullptr, "Console", false);
-	g_ConsoleDialog->ColorPrint(Color(0, 255, 0, 200), "[ABCEnchance] ABCEnchance has run successfully!\n");
+	g_ConsoleDialog->ColorPrint(Color(0, 255, 0, 200), "[ABCEnchance Community Edition] ABCEnchance has loaded successfully!\n");
+	g_ConsoleDialog->ColorPrint(Color(0, 255, 0, 200), "[ABCEnchance Community Edition] You are currently running ABCEnchance Community Edition.\n");
 }
 void CGameConsole::Hide(void){
 	g_ConsoleDialog->Hide();
